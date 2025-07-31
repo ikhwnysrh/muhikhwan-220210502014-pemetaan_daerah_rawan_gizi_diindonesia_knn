@@ -50,8 +50,32 @@
                     font-weight: bold;
                     border-radius: 5px;
                 }
+                
 
                 .leaflet-container { font-size: 1rem; }
+                
+                .legenda{
+                    position: fixed;
+                    bottom: 20px;
+                    left: 20px;
+                    width: 150px;
+                    height: 110px;
+                    z-index:9999;
+                    background-color: white;
+                    border:2px solid grey;
+                    padding: 10px;
+                    font-size:14px;
+                    border-radius: 5px;
+                }
+                @media (max-width: 768px) {
+                    .legenda{
+                        bottom: 10px;
+                        left: 10px;
+                    }
+                    .judul{
+                        font-size:1.3rem;
+                    }
+                }
             </style>
         
 </head>
@@ -64,22 +88,11 @@
             <div class="folium-map" id="map_663dc25026841d0e56a3e37577ae3da4" ></div>
         
     
-<div style="
-    position: fixed;
-    bottom: 50px;
-    left: 50px;
-    width: 150px;
-    height: 110px;
-    z-index:9999;
-    background-color: white;
-    border:2px solid grey;
-    padding: 10px;
-    font-size:14px;
-">
+<div class="legenda">
     <b>Legenda:</b><br>
-    <i style="background:green; width:10px; height:10px; display:inline-block;"></i> Rendah<br>
-    <i style="background:orange; width:10px; height:10px; display:inline-block;"></i> Sedang<br>
-    <i style="background:red; width:10px; height:10px; display:inline-block;"></i> Tinggi<br>
+    <i style="background:green; width:11px; height:11px; display:inline-block; border-radius:50%;"></i> Rendah<br>
+    <i style="background:orange; width:11px; height:11px; display:inline-block; border-radius:50%"></i> Sedang<br>
+    <i style="background:red; width:11px; height:11px; display:inline-block; border-radius:50%"></i> Tinggi<br>
 </div>
 </body>
 <script>
